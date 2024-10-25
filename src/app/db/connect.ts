@@ -25,7 +25,7 @@ export async function connectToDatabase(): Promise<typeof mongoose> {
 
   if (!cached.promise) {
     // Set up the connection promise if not yet done
-    cached.promise = mongoose.connect(MONGODB_URI as string).then((mongoose) => {
+    cached.promise = mongoose.connect(MONGODB_URI as string, {serverSelectionTimeoutMS: 30000}).then((mongoose) => {
       console.log('Connected to MongoDB');
       return mongoose;
     }).catch((error) => {

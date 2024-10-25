@@ -5,12 +5,9 @@ import CityData from '@/app/db/models/CityData';
 // GET Request: Fetch all city data
 export async function GET() {
   try {
-    // Ensure the database is connected
     await connectToDatabase();
-
     // Fetch city data from the CityData collection
     const cities = await CityData.find({});
-    console.log(cities)
     // Return the fetched data as JSON
     return NextResponse.json(cities, { status: 200 });
   } catch (error) {
