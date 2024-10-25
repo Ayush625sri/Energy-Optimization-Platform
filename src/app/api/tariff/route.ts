@@ -1,3 +1,4 @@
+import { connectToDatabase } from '@/app/db/connect';
 import CityData from '@/app/db/models/CityData';
 import { NextResponse } from 'next/server';
 
@@ -5,6 +6,7 @@ import { NextResponse } from 'next/server';
 // Forecast for the next hour
 export async function GET() {
   try {
+    await connectToDatabase();
     // Fetch city data from the CityData collection
     const cities = await CityData.find({});
     // const hourlyDemand = cities[0].hourlyDemand;

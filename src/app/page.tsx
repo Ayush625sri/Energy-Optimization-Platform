@@ -22,8 +22,8 @@ export default async function Home() {
           <ClientComponents />
         ) : (
           <div className="flex flex-col items-center">
-            <h2 className="text-3xl mb-4 font-sans bg-blue-500 p-4 rounded-md text-white font-semibold">
-              Please Sign In or Sign Up
+            <h2 className="text-3xl my-10 font-sans bg-blue-500 p-4 rounded-md text-white font-semibold">
+              Sign In Or Sign Up
             </h2>
             <SignUp routing="hash" />
           </div>

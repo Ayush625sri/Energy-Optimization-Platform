@@ -30,9 +30,9 @@ export default function RootLayout({
       <html lang="en">
         <body>
           <Header />
-          <div id="root" className="min-h-screen">{children}</div>
+          <div id="root" className="min-h-screen py-10">{children}</div>
 
-          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-white bg-gray-700 h-24 p-5">
+          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-white bg-gray-700 h-16 p-5 fixed w-full bottom-0">
             <h3>&copy;2024 All rights reserved.</h3>
           </footer>
         </body>
