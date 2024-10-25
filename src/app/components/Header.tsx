@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <ClerkProvider>
-      <header className="bg-blue-600 text-white p-4 w-full fixed">
+      <header className="bg-blue-600 text-white p-4 w-full fixed z-10">
         <nav className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <Sun className="mr-2" />
